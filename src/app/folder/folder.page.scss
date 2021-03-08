@@ -1,7 +1,3 @@
-ion-menu-button {
-  color: var(--ion-color-primary);
-}
-
 #container {
   text-align: center;
   position: absolute;
@@ -26,3 +22,13 @@ ion-menu-button {
 #container a {
   text-decoration: none;
 }
+
+.menu-background-color{
+  --background: rgb(38, 38, 104);
+  --color: white;
+}
+
+[text-color="menu-text-color"] {
+  color: white;
+}
+
