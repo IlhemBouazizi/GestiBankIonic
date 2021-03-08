@@ -24,17 +24,23 @@
        <ion-input placeholder="Entrer un montant"  [(ngModel)]="montant"name="montant"></ion-input>
      </ion-item>
    
+     
      <ion-item>
        <ion-label><ion-icon name="logo-euro"></ion-icon> To</ion-label>
-       <ion-input placeholder="Devise" [(ngModel)]="to" name="to"></ion-input>
+       <ion-select placeholder="Device">
+        <ion-select-option selected value="EUR">EUR</ion-select-option>
+        <ion-select-option value="TND">TND</ion-select-option>
+        <ion-select-option value="GBP">GBP</ion-select-option>
+      </ion-select>
      </ion-item>
+    
      <ion-item>
       <ion-label><ion-icon name="cash-outline"></ion-icon> Résultat</ion-label>
       <ion-label><ion-icon name="resultat" placeholder="Résultat" [(ngModel)]="resultat"></ion-icon> </ion-label>
       
     </ion-item>
   
-    <br/> <br/>
+   <br/> <br/>
           <ion-button color="primary" type="submit" name="btn">Convertir</ion-button>
         </form>
    </ion-card-content>
