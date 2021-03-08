@@ -8,8 +8,9 @@ const routes: Routes = [
     redirectTo: 'folder',
     pathMatch: 'full'
   },
+
   {
-    path: 'folder',
+    path: 'accueil',
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
   },
   {
@@ -25,7 +26,7 @@ const routes: Routes = [
     loadChildren: () => import('./conversion/conversion.module').then( m => m.ConversionPageModule)
   },
   
-  
+
 ];
 
 @NgModule({

@@ -1,9 +1,39 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Conversion</ion-title>
+    <ion-title>Conversion devise</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+  <ion-card>
+   <ion-card-header>
+     <img src="assets/logo_ilhem.png" alt="Logo de GestiBank"width="40%" height="40%"/>
+    
+     
+   </ion-card-header>
+
+   <ion-card-content>
+    <form>
+     <ion-item>
+       <ion-label stacked class="my-label"><ion-icon name="cash-outline"></ion-icon> Montant </ion-label>
+       <ion-input placeholder="Entrer un montant"  [(ngModel)]="montant"name="montant"></ion-input>
+     </ion-item>
+   
+     <ion-item>
+       <ion-label><ion-icon name="logo-euro"></ion-icon> To</ion-label>
+       <ion-input placeholder="Devise" [(ngModel)]="to" name="to"></ion-input>
+     </ion-item>
+     <ion-item>
+      <ion-label><ion-icon name="cash-outline"></ion-icon> Résultat</ion-label>
+      <ion-label><ion-icon name="resultat" placeholder="Résultat" [(ngModel)]="resultat"></ion-icon> Résultat</ion-label>
+      
+    </ion-item>
+  
+   
+          <ion-button color="primary" type="submit" name="btn">Convertir</ion-button>
+        </form>
+   </ion-card-content>
+ </ion-card>
 
 </ion-content>

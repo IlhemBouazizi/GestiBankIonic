@@ -6,26 +6,26 @@
 
 <ion-content>
 
-  <ion-card align="center">
+  <ion-card>
    <ion-card-header>
-     <img src="assets/logo_ilhem.png" alt="Logo de GestiBank"/>
+     <img src="assets/logo_ilhem.png" alt="Logo de GestiBank"width="20%" height="20%"/>
     
      <ion-card-title>Connexion</ion-card-title>
    </ion-card-header>
 
    <ion-card-content>
-    <form (ngSubmit)="auth()">
+    <form>
      <ion-item>
        <ion-label><ion-icon name="person-outline"></ion-icon> Login</ion-label>
-       <ion-input placeholder="Enter votre login"  [(ngModel)]="login"name="login"></ion-input>
+       <ion-input placeholder="Entrer votre login"  [(ngModel)]="login"name="login"></ion-input>
      </ion-item>
    
      <ion-item>
        <ion-label><ion-icon name="lock-closed-outline"></ion-icon> Mot de passe</ion-label>
-       <ion-input type="password" placeholder="Enter votre mot de passe" [(ngModel)]="pwd" name="pwd"></ion-input>
+       <ion-input type="password" placeholder="Entrer votre mot de passe" [(ngModel)]="pwd" name="pwd"></ion-input>
      </ion-item>
    
-   
+     <br/> <br/>
           <ion-button color="primary" type="submit" name="btn">Se connecter</ion-button>
         </form>
    </ion-card-content>

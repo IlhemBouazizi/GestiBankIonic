@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Création d'un cnouveau compte client</ion-title>
+    <ion-title>Création d'un nouveau compte client</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -8,34 +8,32 @@
 
   <ion-card align="center">
    <ion-card-header>
-     <img src="assets/logo_ilhem.png" alt="Logo de GestiBank"/>
+     <img src="assets/logo_ilhem.png" alt="Logo de GestiBank" width="40%" height="40%"/>
     
      <ion-card-title>Nouveau Compte</ion-card-title>
    </ion-card-header>
 
    <ion-card-content>
-    <form (ngSubmit)="auth()">
+    <form >
      <ion-item>
        <ion-label><ion-icon name="person-outline"></ion-icon> Nom</ion-label>
-       <ion-input placeholder="Enter votre nom"  [(ngModel)]="nom"name="nom"></ion-input>
+       <ion-input placeholder="Entrer votre nom"  [(ngModel)]="nom"name="nom"></ion-input>
      </ion-item>
    
      <ion-item>
-       <ion-label><ion-icon name="lock-closed-outline"></ion-icon> Prénom</ion-label>
-       <ion-input placeholder="Enter votre prénom" [(ngModel)]="prenom" name="prenom"></ion-input>
+       <ion-label><ion-icon name="person-outline"></ion-icon> Prénom</ion-label>
+       <ion-input placeholder="Entrer votre prénom" [(ngModel)]="prenom" name="prenom"></ion-input>
      </ion-item>
      <ion-item>
-      <ion-label><ion-icon name="lock-closed-outline"></ion-icon> Email</ion-label>
+      <ion-label><ion-icon name="mail-outline"></ion-icon> Email</ion-label>
       <ion-input placeholder="Enter votre Email" [(ngModel)]="email" name="email"></ion-input>
     </ion-item>
+    
     <ion-item>
-      <ion-label><ion-icon name="lock-closed-outline"></ion-icon> Mot de passe</ion-label>
-      <ion-input placeholder="Enter votre n° de téléphone" [(ngModel)]="tel" name="tel"></ion-input>
+      <ion-label><ion-icon name="wallet-outline"></ion-icon> Type de compte</ion-label>
+      <ion-input placeholder="Entrer votre prénom" [(ngModel)]="tc" name="tc"></ion-input>
     </ion-item>
-    <ion-item>
-      <ion-label><ion-icon name="lock-closed-outline"></ion-icon> Type de compte</ion-label>
-      <ion-input placeholder="Enter votre prénom" [(ngModel)]="tc" name="tc"></ion-input>
-    </ion-item>
+    <br/> <br/> <br/>
           <ion-button color="primary" type="submit" name="btn">Se connecter</ion-button>
         </form>
    </ion-card-content>
