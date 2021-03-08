@@ -6,9 +6,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public appPages = [
-    { title: 'Créer un nouveau compte', url: '/folder/NouveauCompte', icon: 'person-add-outline' },
-    { title: 'Connexion', url: '/folder/Connexion', icon: 'person-outline' },
-    { title: 'Conversion', url: '/folder/Conversion', icon: 'logo-euro' },
+    { title: 'Accueil', url: 'accueil', icon: 'home-outline' },
+    { title: 'Créer un nouveau compte', url: 'nouveau', icon: 'person-add-outline' },
+    { title: 'Connexion', url: 'connexion', icon: 'person-outline' },
+    { title: 'Conversion', url: 'conversion', icon: 'logo-euro' },
   ];
  
   constructor() {}

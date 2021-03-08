@@ -1,8 +1,12 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
     <ion-title>Conversion devise</ion-title>
   </ion-toolbar>
 </ion-header>
+
 
 <ion-content>
 
@@ -26,7 +30,7 @@
      </ion-item>
      <ion-item>
       <ion-label><ion-icon name="cash-outline"></ion-icon> Résultat</ion-label>
-      <ion-label><ion-icon name="resultat" placeholder="Résultat" [(ngModel)]="resultat"></ion-icon> Résultat</ion-label>
+      <ion-label><ion-icon name="resultat" placeholder="Résultat" [(ngModel)]="resultat"></ion-icon> </ion-label>
       
     </ion-item>
   
