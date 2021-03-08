@@ -1,0 +1,7 @@
+{
+  "name": "GestiBankionic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
