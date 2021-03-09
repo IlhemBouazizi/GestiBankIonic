@@ -13,8 +13,8 @@ import { ConversionPage } from './conversion.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    ConversionPageRoutingModule
+    ConversionPageRoutingModule,
   ],
-  declarations: [ConversionPage]
+  declarations: [ConversionPage],
 })
 export class ConversionPageModule {}

@@ -10,7 +10,7 @@ const routes: Routes = [
   },
 
   {
-    path: 'accueil',
+    path: '',
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
   },
   {

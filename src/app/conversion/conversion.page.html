@@ -3,47 +3,69 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title class="ion-text-center"  >
+    <ion-title class="ion-text-center">
       <span text-color="menu-text-color">Conversion devise</span>
-   </ion-title>
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-
 <ion-content>
-
   <ion-card align="center">
     <ion-card-header>
-      <img src="assets/logo_ilhem.png" alt="Logo de GestiBank" width="40%" height="40%"/>    
+      <img
+        src="assets/logo_ilhem.png"
+        alt="Logo de GestiBank"
+        width="40%"
+        height="40%"
+      />
     </ion-card-header>
 
-   <ion-card-content>
-    <form>
-     <ion-item>
-       <ion-label stacked class="my-label"><ion-icon name="cash-outline"></ion-icon> Montant </ion-label>
-       <ion-input placeholder="Entrer un montant"  [(ngModel)]="montant"name="montant"></ion-input>
-     </ion-item>
-   
-     
-     <ion-item>
-       <ion-label><ion-icon name="logo-euro"></ion-icon> To</ion-label>
-       <ion-select placeholder="Device">
-        <ion-select-option selected value="EUR">EUR</ion-select-option>
-        <ion-select-option value="TND">TND</ion-select-option>
-        <ion-select-option value="GBP">GBP</ion-select-option>
-      </ion-select>
-     </ion-item>
-    
-     <ion-item>
-      <ion-label><ion-icon name="cash-outline"></ion-icon> Résultat</ion-label>
-      <ion-label><ion-icon name="resultat" placeholder="Résultat" [(ngModel)]="resultat"></ion-icon> </ion-label>
-      
-    </ion-item>
-  
-   <br/> <br/>
-          <ion-button color="primary" type="submit" name="btn">Convertir</ion-button>
-        </form>
-   </ion-card-content>
- </ion-card>
+    <ion-card-content>
+      <ion-grid >
 
+        <ion-row>
+          <ion-col>
+              <ion-list>                
+                <ion-item>
+                  <ion-label><ion-icon name="logo-euro"></ion-icon> Devise</ion-label>
+                  <ion-select [(ngModel)]="devise" (ionChange)="codeSelected()" placeholder="Sélectionner">
+                    <ion-select-option value="EUR">EURO</ion-select-option>
+                    <ion-select-option value="TND">DINARD</ion-select-option>
+                    <ion-select-option value="GBP">LIVRE</ion-select-option>
+                  </ion-select>
+                </ion-item>
+              </ion-list>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>            
+            <ion-item>
+              <ion-label><ion-icon name="cash-outline"></ion-icon> Montant</ion-label>
+              <ion-input [(ngModel)]="montant"></ion-input>
+              <br/><br/>
+            </ion-item>          
+          </ion-col>
+        </ion-row>
+          
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label><ion-icon name="cash-outline"></ion-icon> Résultat</ion-label>
+              <ion-input [(ngModel)]="resultat"></ion-input>
+              <br/><br/>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+          
+        <ion-row>
+          <ion-col class="text-align:left"></ion-col>
+          <ion-col>
+            <ion-button (click)="convert()"> CONVERTIR </ion-button>
+          </ion-col>
+          <ion-col class="text-align:right"></ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

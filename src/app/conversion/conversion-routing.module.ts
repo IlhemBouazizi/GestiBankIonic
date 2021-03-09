@@ -6,8 +6,8 @@ import { ConversionPage } from './conversion.page';
 const routes: Routes = [
   {
     path: '',
-    component: ConversionPage
-  }
+    component: ConversionPage,
+  },
 ];
 
 @NgModule({
