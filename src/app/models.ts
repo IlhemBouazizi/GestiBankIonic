@@ -3,12 +3,13 @@ import { ValueAccessor } from "@ionic/angular/directives/control-value-accessors
 
 export interface Customer{
     name: string,
-    firstname: string,
+    prenom: string,
     tel: string,
     email: string,
     role: string,
     status: string,
-    password: string
+    password: string,
+    typeCompte: string
 }
 
 export interface Agent{
