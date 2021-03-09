@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NouveauComptePageRoutingModule } from './nouveau-compte-routing.module';
 import { CustomerServiceService } from '../services/customer-service.service';
 import { Customer } from '../models';
+
 @Component({
   selector: 'app-nouveau-compte',
   templateUrl: './nouveau-compte.page.html',
@@ -31,7 +32,7 @@ compte: string;
       tel: this.phone,
       email: this.mail,
       role: "CLIENT",
-      status: "ATTENTE",
+      statut: "ATTENTE",
       typeCompte: this.compteSelected(),
       password: " ",
     }

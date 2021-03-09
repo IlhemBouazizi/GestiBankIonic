@@ -3,35 +3,49 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title class="ion-text-center"  >
-      <span text-color="menu-text-color">Authentification</span>
+    <ion-title class="ion-text-center">
+      <span text-color="menu-text-color">Accéder à mon compte</span>
    </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
-  <ion-card align="center">
-    <ion-card-header>
+  <ion-grid >
+    <ion-card-header  align="center">
       <img src="assets/logo_ilhem.png" alt="Logo de GestiBank" width="40%" height="40%"/>    
     </ion-card-header>
 
-   <ion-card-content>
-    <form>
-     <ion-item>
-       <ion-label><ion-icon name="person-outline"></ion-icon> Login</ion-label>
-       <ion-input placeholder="Entrer votre login"  [(ngModel)]="login"name="login"></ion-input>
-     </ion-item>
-   
-     <ion-item>
-       <ion-label><ion-icon name="lock-closed-outline"></ion-icon> Mot de passe</ion-label>
-       <ion-input type="password" placeholder="Entrer votre mot de passe" [(ngModel)]="pwd" name="pwd"></ion-input>
-     </ion-item>
-   
-     <br/> <br/>
-          <ion-button color="primary" type="submit" name="btn">Se connecter</ion-button>
-        </form>
-   </ion-card-content>
- </ion-card>
+    <ion-row>
+      <ion-col>        
+          <ion-item>
+          <ion-label><ion-icon name="mail-outline"></ion-icon>  E-mail</ion-label>          
+          <ion-input [(ngModel)]="email" ></ion-input>
+          <br/><br/>
+        </ion-item>      
+      </ion-col>
+    </ion-row>
+      
+    <ion-row>
+      <ion-col>        
+        <ion-item>
+          <ion-label><ion-icon name="key-outline"></ion-icon>  Mot de passe</ion-label>
+          <ion-input [(ngModel)]="password" type="password"></ion-input>
+          <br/><br/>
+        </ion-item>      
+      </ion-col>
+    </ion-row>
+      
+    <ion-row>
+      <ion-col class="text-align:left"></ion-col>
+      <ion-col>
+        <br/><br/>
+        <ion-button (click)="connect()"> SE CONNECTER </ion-button>
+      </ion-col>
+      <ion-col class="text-align:right"></ion-col>
+    </ion-row>
+      
+  </ion-grid>
+
 
 </ion-content>
+

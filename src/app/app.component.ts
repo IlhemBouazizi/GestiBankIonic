@@ -9,7 +9,8 @@ export class AppComponent {
     { title: 'Accueil', url: '', icon: 'home-outline' },
     { title: 'Créer un nouveau compte', url: 'nouveau', icon: 'person-add-outline' },
     { title: 'Connexion', url: 'connexion', icon: 'person-outline' },
-    { title: 'Conversion', url: 'conversion', icon: 'logo-euro' },
+    { title: 'Conversion', url: 'conversion', icon: 'logo-euro' }
+  
   ];
  
   constructor() {}

@@ -7,14 +7,14 @@ export interface Customer{
     tel: string,
     email: string,
     role: string,
-    status: string,
+    statut: string,
     password: string,
     typeCompte: string
 }
 
 export interface Agent{
     name: string,
-    firstname: string,
+    prenom: string,
     tel: string,
     email: string,
     role: "AGENT",
@@ -22,12 +22,12 @@ export interface Agent{
     password: string
 }
 
-export interface Administrator{
+export interface Administrateur{
     name: string,
-    firstname: string,
+    prenom: string,
     tel: string,
     email: string,
-    role: "ADMINISTRATOR",
+    role: "ADMIN",
     matricule: number,
     password: string
 }
@@ -40,7 +40,15 @@ export interface Currency {
         "source" : "USD",
         "quotes": {}
 }
-
+export interface User{
+    name: string,
+    prenom: string,
+    tel: string,
+    email: string,
+    role: string,
+    password: string,
+    
+}
 export interface Quotes{
     "quotes" : {KeyValue}
 }

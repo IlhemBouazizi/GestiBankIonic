@@ -25,7 +25,19 @@ const routes: Routes = [
     path: 'conversion',
     loadChildren: () => import('./conversion/conversion.module').then( m => m.ConversionPageModule)
   },
-  
+  {
+    path: 'client',
+    loadChildren: () => import('./client/client.module').then( m => m.ClientPageModule)
+  },
+  {
+    path: 'admin',
+    loadChildren: () => import('./admin/admin.module').then( m => m.AdminPageModule)
+  },
+  {
+    path: 'agent',
+    loadChildren: () => import('./agent/agent.module').then( m => m.AgentPageModule)
+  },
+
 
 ];
 
