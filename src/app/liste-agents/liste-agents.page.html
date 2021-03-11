@@ -1,9 +1,11 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar class="menu-background-color">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Liste des agents</ion-title>
+    <ion-title class="ion-text-center">
+      <span text-color="menu-text-color">Liste des agents</span>
+   </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -57,6 +59,14 @@
 
       </ion-card-content>
     </ion-card>
+
+    <ion-row>
+      <ion-col class="text-align:left"></ion-col>
+      <ion-col>
+        <ion-button (click)="Retour()" > RETOUR </ion-button>
+      </ion-col>
+      <ion-col class="text-align:right"></ion-col>
+    </ion-row>
 
 
 

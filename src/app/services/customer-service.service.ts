@@ -53,6 +53,12 @@ export class CustomerServiceService {
       return this.httpClient.post(this.dataBase + 'delete/' + ['email'], email);
     }
     */
+
+    getClientsAffecter(matricule : string){
+      //return this.httpClient.get(this.dataBase + 'affecter');
+      return this.httpClient.get('http://127.0.0.1:85/clients/affecter/' + matricule);
+      
+    }
     
     
     getUser(email: string) {
@@ -77,3 +83,6 @@ console.log("2")
   return this.httpClient.put('http://127.0.0.1:85/clients/' + customer.email, customer)
 }
 }
+
+
+

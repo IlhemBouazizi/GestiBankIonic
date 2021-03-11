@@ -4,7 +4,7 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title class="ion-text-center">
-      <span text-color="menu-text-color">Affecter un compte</span>
+      <span text-color="menu-text-color">Valider les demandes</span>
    </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -12,7 +12,7 @@
 
 <ion-content>
   <ion-list *ngFor="let client of clients">
-    <form #form="ngForm" (ngSubmit)="affecter(form)">
+    <form #form="ngForm" (ngSubmit)="valider(form)">
       <ion-item>
         <ion-input
           name="email"
@@ -23,19 +23,8 @@
           hidden
         ></ion-input>
         <ion-label class="name-label">
-          {{ client.name }} {{client.prenom.toUpperCase()}}</ion-label>       
-        <ion-item slot="end">
-
-          <!--<ion-label>Agents : </ion-label>-->
-          <select ngModel name="agentMatricule" required>
-            <option selected disabled hidden>Agents</option>
-            <option *ngFor="let agent of agents" [ngValue]="agent.matricule">
-              {{agent.matricule}}
-            </option>
-          </select>
-        </ion-item>
-       
-        <ion-button type="submit" slot="end">Affecter</ion-button>
+          {{ client.name }} {{client.prenom.toUpperCase()}}</ion-label>  
+        <ion-button type="submit" slot="end">VALIDER</ion-button>          
       </ion-item>
     </form>
   </ion-list>

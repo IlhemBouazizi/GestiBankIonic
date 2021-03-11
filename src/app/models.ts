@@ -48,7 +48,7 @@ export interface User{
     email: string,
     role: string,
     password: string,
-    
+    matricule: string,    
 }
 export interface Quotes{
     "quotes" : {KeyValue}

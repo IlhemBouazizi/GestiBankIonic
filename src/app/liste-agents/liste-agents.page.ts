@@ -36,11 +36,15 @@ export class ListeAgentsPage implements OnInit {
       }
     );
   }
-/*
+
   public update(agent) { 
     this.router.navigate(["/"+agent.email +""]);
   }
-*/
+
+  Retour(){
+    this.router.navigate(["/admin"]);
+  }
+
 }
 
 

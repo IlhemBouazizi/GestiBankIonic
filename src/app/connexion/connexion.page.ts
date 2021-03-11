@@ -31,8 +31,8 @@ export class ConnexionPage implements OnInit {
           this.password = "";
           switch (this.userInfos.role) {
             case "AGENT":
-              //  console.log("AGENT.");
-                this.router.navigate(["/agent"]);
+                console.log(this.userInfos.matricule);
+                this.router.navigate(["/agent",this.userInfos.matricule]);
                 break;
             case "ADMIN":
             //    console.log("ADMIN");

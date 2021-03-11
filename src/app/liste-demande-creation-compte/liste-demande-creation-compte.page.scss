@@ -1,8 +1,13 @@
+.menu-background-color{
+  --background: rgb(38, 38, 104);
+  --color: white;
+}
+
 [text-color="menu-text-color"] {
-    color: white;
-  }
-  .menu-background-color{
-    --background: rgb(38, 38, 104);
-    --color: white;
-  }
-  
+  color: white;
+}
+
+.button.customBtn{
+  width:250px;
+}
+ 

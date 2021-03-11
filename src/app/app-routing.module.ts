@@ -34,7 +34,7 @@ const routes: Routes = [
     loadChildren: () => import('./admin/admin.module').then( m => m.AdminPageModule)
   },
   {
-    path: 'agent',
+    path: 'agent/:matricule',
     loadChildren: () => import('./agent/agent.module').then( m => m.AgentPageModule)
   },
   {
@@ -49,6 +49,11 @@ const routes: Routes = [
     path: 'liste-demande-creation-compte',
     loadChildren: () => import('./liste-demande-creation-compte/liste-demande-creation-compte.module').then( m => m.ListeDemandeCreationComptePageModule)
   },
+  {
+    path: 'valider-compte/:matricule',
+    loadChildren: () => import('./valider-compte/valider-compte.module').then( m => m.ValiderComptePageModule)
+  },
+
   
 
 

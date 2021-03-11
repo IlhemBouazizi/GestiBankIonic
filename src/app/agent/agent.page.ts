@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-agent',
@@ -7,14 +9,21 @@ import { Router } from '@angular/router';
   styleUrls: ['./agent.page.scss'],
 })
 export class AgentPage implements OnInit {
-
-  constructor(private router: Router) { }
+  matricule : string;
+ 
+  constructor(private router: ActivatedRoute, private MyRoute: Router) { }
 
   ngOnInit() {
+    this.matricule = this.router.snapshot.params['matricule'];
+    console.log(this.matricule);    
   }
 
   deconnexion() {
-    this.router.navigate(["/connexion"]);
+    this.MyRoute.navigate(["/connexion"]);
   }
-
+  ValiderCompte()
+  {
+    console.log(this.matricule);
+    this.MyRoute.navigate(["/valider-compte",this.matricule]);
+  }
 }

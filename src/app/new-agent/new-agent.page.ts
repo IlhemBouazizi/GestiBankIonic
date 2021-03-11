@@ -58,4 +58,10 @@ export class NewAgentPage implements OnInit {
     return rand;       
  }
 
+ Retour(){
+  this.router2.navigate(["/admin"]);
+}
+
+ 
+
 }

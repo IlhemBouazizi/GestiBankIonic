@@ -4,10 +4,11 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title class="ion-text-center">
-      <span text-color="menu-text-color">Ajout d'un nouveau compte agent</span>
+      <span text-color="menu-text-color">Nouveau compte agent</span>
    </ion-title>
   </ion-toolbar>
 </ion-header>
+
 
 <ion-content>
 
@@ -19,8 +20,8 @@
     <ion-row>
       <ion-col>        
         <ion-item>
-          <ion-label>Nom : </ion-label>
-          <ion-input [(ngModel)]="nom"></ion-input>
+          <ion-label></ion-label>
+          <ion-input [(ngModel)]="nom" placeholder="Nom"></ion-input>
           <br/><br/>
         </ion-item>      
       </ion-col>
@@ -29,8 +30,8 @@
     <ion-row>
       <ion-col>
         <ion-item>
-          <ion-label>Prénom : </ion-label>
-          <ion-input [(ngModel)]="prenom"></ion-input>
+          <ion-label></ion-label>
+          <ion-input [(ngModel)]="prenom" placeholder="Prénom"></ion-input>
           <br/><br/>
         </ion-item>      
       </ion-col>
@@ -39,8 +40,8 @@
     <ion-row>
       <ion-col>
         <ion-item>
-          <ion-label>E-mail : </ion-label>
-          <ion-input [(ngModel)]="mail"></ion-input>
+          <ion-label></ion-label>
+          <ion-input [(ngModel)]="mail"  placeholder="E-mail"></ion-input>
           <br/><br/>
         </ion-item>
       </ion-col>
@@ -49,8 +50,8 @@
     <ion-row>
       <ion-col>
         <ion-item>
-          <ion-label>N° teléphone : </ion-label>
-          <ion-input [(ngModel)]="phone" ></ion-input>
+          <ion-label></ion-label>
+          <ion-input [(ngModel)]="phone" placeholder="N° teléphone" ></ion-input>
           <br/><br/>
         </ion-item>
       </ion-col>
@@ -62,17 +63,9 @@
         <ion-button (click)="NewAgent()" > Ajouter un agent </ion-button>
       </ion-col>
       <ion-col class="text-align:right"></ion-col>
-    </ion-row>
-  </ion-grid>
-  <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-  <ion-content>
-    <ion-row>
-      <ion-col class="text-align:left"></ion-col>
-      <br/><br/>  <br/><br/>
-      <ion-col>
-        <ion-button (click)="deconnexion()" class="customBtn"> DECONNEXION </ion-button>
-      </ion-col>
-      <ion-col class="text-align:right"></ion-col>
-    </ion-row>
-  </ion-content>
+    </ion-row>    
+    <ion-card-header>
+      <img (click)="Retour()" src="assets/BackButton.jpg" alt="Logo de GestiBank" width="40%" height="40%"/>    
+    </ion-card-header>
+  </ion-grid>  
 </ion-content>

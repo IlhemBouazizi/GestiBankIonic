@@ -35,7 +35,7 @@ updatedClient;
   public listeAgents(){
     this.service.getAgents().subscribe(
       response => {
-        console.log(response);
+       // console.log(response);
         this.agents = (<Agent[]>response);
 
       }
@@ -44,7 +44,7 @@ updatedClient;
 affecter(form)
 {
       //if (form.value.agentMatricule){
-        console.log("1");
+        //console.log("1");
          this.service.getUser(form.value.email).subscribe(
          (client: Customer) => 
         
@@ -63,21 +63,26 @@ affecter(form)
           };
       
         //  client.agentMatricule = form.value.agentMatricule;
-          console.log("ok" +this.updatedClient);
+         // console.log("ok" +this.updatedClient);
 
         this.service.updateUser(this.updatedClient).subscribe(response=> {
 
         
-        console.log(this.updatedClient);
+       // console.log(this.updatedClient);
       
-      //this.presentToast("Client: " + client.prenom + " " + client.name.toUpperCase() +" affecté à l'agent: " + this.client.agentMatricule);
+      this.presentToast("Client: " + client.prenom + " " + client.name.toUpperCase() +" affecté à l'agent: " + this.client.agentMatricule);
       //  this.refresh();
       }
         );
+
+        this.refresh();
+    this.listeAgents();
+
+        this.router.navigate(["/liste-demande-creation-compte"]);
     });
   //  )} //else {
 
-     // this.presentToast("Veuillez choisir un agent");
+      //this.presentToast("Veuillez choisir un agent");
    // }
 
   }  
@@ -88,5 +93,8 @@ affecter(form)
     });
     toast.present();
   }
-
+  
+  Retour(){
+    this.router.navigate(["/admin"]);
+  }
 }

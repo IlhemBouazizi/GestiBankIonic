@@ -16,7 +16,7 @@ export class ClientPage implements OnInit {
   deconnexion() {
     this.router.navigate(["/connexion"]);
   }
-
+  
   
 
 }
