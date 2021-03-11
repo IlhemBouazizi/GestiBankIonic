@@ -18,29 +18,29 @@
     <ion-row>
       <ion-col class="text-align:left"></ion-col>
       <ion-col>
-        <ion-button class="customBtn"> LISTE DES AGENTS </ion-button>
+        <ion-button class="customBtn" (click)="ListeAgentsPage()"> LISTE DES AGENTS </ion-button>
       </ion-col>
       <ion-col class="text-align:right"></ion-col>
     </ion-row>
     <ion-row>
       <ion-col class="text-align:left"></ion-col>
       <ion-col>
-        <ion-button class="customBtn"> AJOUTER UN AGENT </ion-button>
+        <ion-button class="customBtn" (click)="PageNewAgent()" > AJOUTER UN AGENT </ion-button>
       </ion-col>
       <ion-col class="text-align:right"></ion-col>
     </ion-row>
     <ion-row>
       <ion-col class="text-align:left"></ion-col>
       <ion-col>
-        <ion-button class="customBtn"> CONSULTER LES DEMANDES </ion-button>
+        <ion-button class="customBtn" (click)="ConsulterDemandes()"> CONSULTER LES DEMANDES </ion-button>
       </ion-col>
       <ion-col class="text-align:right"></ion-col>
     </ion-row>
   </ion-card>
-
+  <br/><br/><br/><br/><br/><br/><br/><br/><br/>
     <ion-row>
       <ion-col class="text-align:left"></ion-col>
-      
+      <br/><br/>  <br/><br/>
       <ion-col>
         <ion-button (click)="deconnexion()" class="customBtn"> DECONNEXION </ion-button>
       </ion-col>

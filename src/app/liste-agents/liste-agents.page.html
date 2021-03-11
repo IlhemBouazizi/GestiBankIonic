@@ -1,0 +1,63 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Liste des agents</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+    <ion-card *ngFor="let agent of agents">
+      
+      <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            Nom : 
+          </ion-col>
+          <ion-col>
+            {{agent.name}}
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            Prénom : 
+          </ion-col>
+          <ion-col>
+            {{agent.prenom}}
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            N° téléphone : 
+          </ion-col>
+          <ion-col>
+            {{agent.tel}}
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            Matricule : 
+          </ion-col>
+          <ion-col>
+            {{agent.matricule}}
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            Email : 
+          </ion-col>
+          <ion-col>
+            {{agent.email}}
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      </ion-card-content>
+    </ion-card>
+
+
+
+</ion-content>

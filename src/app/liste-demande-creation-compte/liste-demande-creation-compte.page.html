@@ -1,0 +1,67 @@
+
+<ion-header [translucent]="true">
+  <ion-toolbar class="menu-background-color">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">
+      <span text-color="menu-text-color">Affecter un compte</span>
+   </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-card *ngFor="let client of clients">
+      <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            Nom : 
+          </ion-col>
+          <ion-col>
+            {{client.name}}
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            Prénom : 
+          </ion-col>
+          <ion-col>
+            {{client.prenom}}
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+             Email: 
+          </ion-col>
+          <ion-col>
+            {{client.email}}
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            Type de compte : 
+          </ion-col>
+          <ion-col>
+            {{client.typeCompte}}
+          </ion-col>
+        </ion-row>
+       <ion-row>
+        
+          <ion-col >
+            <ion-select [(ngModel)]="agentSelect"  placeholder="Affecter à l'agent">
+            <ion-select-option *ngFor="let agent of agents">{{agent.prenom}}{{agent.nom}}</ion-select-option>
+            <!-- <ion-select-option value="*ngFor="let agent of agents" (ionChange)="agentSelected()" placeholder="Sélectionner un agent"">EURO</ion-select-option>-->
+         
+          </ion-select>
+         </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      </ion-card-content>
+    </ion-card>
+
+
+
+</ion-content>
+

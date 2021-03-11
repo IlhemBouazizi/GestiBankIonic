@@ -12,9 +12,17 @@ export class AdminPage implements OnInit {
 
   ngOnInit() {
   }
-
+  PageNewAgent() {
+    this.router.navigate(["/new-agent"]);
+  }
   deconnexion() {
     this.router.navigate(["/connexion"]);
+  }
+  ListeAgentsPage() {
+    this.router.navigate(["/liste-agents"]);
+  }
+  ConsulterDemandes(){
+    this.router.navigate(["/liste-demande-creation-compte"]);
   }
 
 }

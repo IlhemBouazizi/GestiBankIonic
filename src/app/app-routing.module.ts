@@ -37,6 +37,20 @@ const routes: Routes = [
     path: 'agent',
     loadChildren: () => import('./agent/agent.module').then( m => m.AgentPageModule)
   },
+  {
+    path: 'new-agent',
+    loadChildren: () => import('./new-agent/new-agent.module').then( m => m.NewAgentPageModule)
+  },
+  {
+    path: 'liste-agents',
+    loadChildren: () => import('./liste-agents/liste-agents.module').then( m => m.ListeAgentsPageModule)
+  },
+  {
+    path: 'liste-demande-creation-compte',
+    loadChildren: () => import('./liste-demande-creation-compte/liste-demande-creation-compte.module').then( m => m.ListeDemandeCreationComptePageModule)
+  },
+  
+
 
 
 ];
@@ -46,5 +60,12 @@ const routes: Routes = [
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
   ],
   exports: [RouterModule]
+
+
+
+
+
+
+  
 })
 export class AppRoutingModule {}

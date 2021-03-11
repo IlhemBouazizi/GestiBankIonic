@@ -15,10 +15,10 @@ export interface Customer{
 export interface Agent{
     name: string,
     prenom: string,
-    tel: string,
+    tel: number,
     email: string,
     role: "AGENT",
-    matricule: number,
+    matricule: string,
     password: string
 }
 

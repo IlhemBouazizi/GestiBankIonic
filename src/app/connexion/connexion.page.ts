@@ -26,27 +26,27 @@ export class ConnexionPage implements OnInit {
         this.userInfos = <User>data;
         
         if(this.password == this.userInfos.password){
-          console.log("Auth Réussite");
+         // console.log("Auth Réussite");
           this.email = "";
           this.password = "";
           switch (this.userInfos.role) {
             case "AGENT":
-                console.log("AGENT.");
+              //  console.log("AGENT.");
                 this.router.navigate(["/agent"]);
                 break;
             case "ADMIN":
-                console.log("ADMIN");
+            //    console.log("ADMIN");
                 this.router.navigate(["/admin"]);
                 break;
             case "CLIENT":
-              console.log("CLIENT");
+             // console.log("CLIENT");
               this.router.navigate(["/client"]);
               break;
           }
          //this.router.navigate([""]]);
         } else {
-          this.messageToasted("Votre mot de passe est incorrect");
-          console.log("Mot de passe incorrect !");
+          this.messageToasted("Votre login ou mot de passe est incorrect");
+         // console.log("Mot de passe incorrect !");
         }
         console.log(this.userInfos);
       })

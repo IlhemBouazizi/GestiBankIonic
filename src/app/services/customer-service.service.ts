@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Customer } from '../models';
-
+import { Agent } from '../models';
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +9,7 @@ import { Customer } from '../models';
 export class CustomerServiceService {
 
   private dataBase = "http://127.0.0.1:85/clients/";
+  private dataBase2 = "http://127.0.0.1:85/agent/";
 
   //customers/add
 
@@ -35,7 +36,24 @@ export class CustomerServiceService {
   }
 
   deleteCustomer(email: String){
-    return this.httpClient.post(this.dataBase + 'update/' + ['email'], email);
+    return this.httpClient.post(this.dataBase + 'delete/' + ['email'], email);
   }
-
+   //agent/add
+  postAgent(agent: Agent){
+    return this.httpClient.post(this.dataBase2 + "add", agent);
+  }
+    //agent/list
+    getAgents(){
+      return this.httpClient.get(this.dataBase2 + 'list');
+    }
+    getClientsAttentes(){
+      return this.httpClient.get(this.dataBase + 'list/attente');
+    }
+    /*supprimer un agent
+    deleteAgent(email: String){
+      return this.httpClient.post(this.dataBase + 'delete/' + ['email'], email);
+    }
+    putAgent(agent: Agent){
+      return this.httpClient.post(this.dataBase2 + 'update/' + ['email'], agent);
+    }*/
 }
