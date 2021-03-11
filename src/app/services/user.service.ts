@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class UserService {
 
-  public dataBase = "http://127.0.0.1:85/users/";
+  public dataBase = "http://127.0.0.1:85/clients/";
 
   constructor(private httpClient : HttpClient) { }
 

@@ -19,6 +19,7 @@ prenom : string;
 phone : string;
 mail : string;
 compte: string;
+agentMatricule: string;
 
   constructor(
     private service : CustomerServiceService, private router : Router, public toastController: ToastController) { }
@@ -34,6 +35,7 @@ compte: string;
       email: this.mail,
       role: "CLIENT",
       statut: "ATTENTE",
+      agentMatricule: "",
       typeCompte: this.compteSelected(),
       password: this.nom + this.random(),
      

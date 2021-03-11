@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Customer } from '../models';
 import { Agent } from '../models';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -10,7 +11,7 @@ export class CustomerServiceService {
 
   private dataBase = "http://127.0.0.1:85/clients/";
   private dataBase2 = "http://127.0.0.1:85/agent/";
-
+  
   //customers/add
 
   constructor(private httpClient: HttpClient) { }
@@ -31,9 +32,7 @@ export class CustomerServiceService {
     return this.httpClient.post(this.dataBase + "add", customer);
   }
 
-  putCustomer(customer){
-    return this.httpClient.post(this.dataBase + 'update/' + ['email'], customer);
-  }
+ 
 
   deleteCustomer(email: String){
     return this.httpClient.post(this.dataBase + 'delete/' + ['email'], email);
@@ -53,7 +52,28 @@ export class CustomerServiceService {
     deleteAgent(email: String){
       return this.httpClient.post(this.dataBase + 'delete/' + ['email'], email);
     }
-    putAgent(agent: Agent){
-      return this.httpClient.post(this.dataBase2 + 'update/' + ['email'], agent);
-    }*/
+    */
+    
+    
+    getUser(email: string) {
+      return this.httpClient.get('http://127.0.0.1:85/clients/' + email);
+
+    /*  return new Promise(
+        (resolve, reject) => {
+          .toPromise().then(
+            (data) => {
+              resolve(data.valueOf());
+            }, (error) => {
+              reject(error);
+            }
+          );
+           
+        }
+      );*/
+  
+}
+updateUser(customer) {
+console.log("2")
+  return this.httpClient.put('http://127.0.0.1:85/clients/' + customer.email, customer)
+}
 }

@@ -9,7 +9,8 @@ export interface Customer{
     role: string,
     statut: string,
     password: string,
-    typeCompte: string
+    typeCompte: string,
+    agentMatricule: string
 }
 
 export interface Agent{
