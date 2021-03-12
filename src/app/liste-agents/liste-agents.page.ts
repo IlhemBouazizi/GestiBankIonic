@@ -15,6 +15,7 @@ export class ListeAgentsPage implements OnInit {
   constructor(private service : CustomerServiceService, private router: Router, private router2: ListeAgentsPageRoutingModule ) { }
 
   ngOnInit(): void {
+    console.log("1");
     this.refresh();
   }
  /* public delete(agent) {
